@@ -1,7 +1,7 @@
-import { $fetch } from "ohmyfetch";
+import { $fetch } from 'ohmyfetch'
 
 export default abstract class ApiService {
-  baseURL: string = "http://localhost:3001";
+  baseURL: string = 'http://localhost:3001'
 
   get<T>(url: string): Promise<T> {
     return this.call<T>(url, 'GET')
@@ -19,12 +19,7 @@ export default abstract class ApiService {
     return this.call<T>(url, 'DELETE')
   }
 
-  private async call<T>(url: string, method: string, data?: any): Promise<T> {
-    try {
-      return await $fetch(url, { baseURL: this.baseURL, method, body: data })
-    } catch (e) {
-      console.log(e)
-      throw e;
-    }
+  private call<T>(url: string, method: string, data?: any): Promise<T> {
+    return $fetch(url, { baseURL: this.baseURL, method, body: data })
   }
 }

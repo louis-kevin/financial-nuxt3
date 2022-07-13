@@ -1,20 +1,18 @@
 import { mount } from '@vue/test-utils'
 import { createTestingPinia } from '@pinia/testing'
+import { expect } from 'vitest'
 import BillListItem from '~/components/bill-list-item.vue'
-import { expect } from "vitest";
-import { createRandomBill } from "~/test/factories/billFactory";
+import { createRandomBill } from '~/test/factories/billFactory'
 
-const bill = createRandomBill();
+const bill = createRandomBill()
 
 const mountBillListItem = (bill) => {
   expect(BillListItem).toBeTruthy()
 
   const wrapper = mount(BillListItem, {
-    propsData: { bill, },
+    propsData: { bill },
     global: {
-      plugins: [
-        createTestingPinia(),
-      ],
+      plugins: [createTestingPinia()],
     },
   })
 
@@ -22,15 +20,17 @@ const mountBillListItem = (bill) => {
   expect(wrapper.text()).toContain(bill.amount)
   expect(wrapper.text()).toContain(bill.createdAt)
 
-  const checkbox = wrapper.find(`v-checkbox`);
+  const checkbox = wrapper.find(`v-checkbox`)
 
-  expect(checkbox.exists()).toBe(true);
+  expect(checkbox.exists()).toBe(true)
 
-  expect(checkbox.attributes('model-value')).toBe(`${bill.done}`);
+  expect(checkbox.attributes('model-value')).toBe(`${bill.done}`)
 
-  return wrapper;
+  return wrapper
 }
 
-test('show the bill information with checkbox unchecked', () => mountBillListItem(bill))
+test('show the bill information with checkbox unchecked', () =>
+  mountBillListItem(bill))
 
-test('show the bill information with checkbox checked', () => mountBillListItem({...bill, done: true}))
+test('show the bill information with checkbox checked', () =>
+  mountBillListItem({ ...bill, done: true }))

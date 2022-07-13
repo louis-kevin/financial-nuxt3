@@ -2,7 +2,12 @@
   <v-list-item class="accent mb-3" lines="two">
     <v-row align="center">
       <v-col cols="1" sm="1">
-        <v-checkbox :model-value="bill.done" @click="toggle" color="primary" hide-details />
+        <v-checkbox
+          :model-value="bill.done"
+          color="primary"
+          hide-details
+          @click="toggle"
+        />
       </v-col>
       <v-col cols="11">
         <v-row justify="space-between" class="pl-3 pl-lg-0">
@@ -18,18 +23,17 @@
 </template>
 
 <script lang="ts" setup>
-import { Bill } from "@/types";
-import { useBillStore } from "@/stores/billsStore";
+import { Bill } from '@/types'
+import { useBillStore } from '@/stores/billsStore'
 
 interface Props {
-  bill: Required<Bill>;
+  bill: Required<Bill>
 }
 
 const props = defineProps<Props>()
 
 const toggle = () => {
-  const billStore = useBillStore();
+  const billStore = useBillStore()
   billStore.toggleBill(props.bill)
 }
-
 </script>

@@ -1,21 +1,21 @@
 import { mount } from '@vue/test-utils'
 import { createTestingPinia } from '@pinia/testing'
 import TotalToPay from '../../components/total-to-pay.vue'
-import { createBillState } from "~/test/factories/billFactory";
+import { createBillState } from '~/test/factories/billFactory'
 
 test('show the total to pay', () => {
   expect(TotalToPay).toBeTruthy()
-  const billState = createBillState(3, {amount: 10, done: false});
+  const billState = createBillState(3, { amount: 10, done: false })
 
-  const total = 3 * 10;
+  const total = 3 * 10
 
   const wrapper = mount(TotalToPay, {
     global: {
       plugins: [
         createTestingPinia({
           initialState: {
-            bills: billState
-          }
+            bills: billState,
+          },
         }),
       ],
     },
@@ -33,8 +33,8 @@ test('show the total to pay even with no bills', () => {
       plugins: [
         createTestingPinia({
           initialState: {
-            bills: createBillState(0)
-          }
+            bills: createBillState(0),
+          },
         }),
       ],
     },
