@@ -11,7 +11,6 @@ export const useBillStore = defineStore({
   }),
   actions: {
     async loadList() {
-      console.log(123123123);
       const billsList = await billService.list();
       const bills: BillList = {};
       billsList.forEach((bill: Required<Bill>) => {
