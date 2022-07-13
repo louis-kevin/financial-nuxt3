@@ -6,7 +6,7 @@
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "backend": "json-server --watch ./db.json --port 3001",
-    "test": "vitest"
+    "test": "npx vitest"
   },
   "devDependencies": {
     "@faker-js/faker": "^7.3.0",
