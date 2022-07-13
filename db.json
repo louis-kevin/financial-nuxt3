@@ -1,0 +1,88 @@
+{
+  "bills": [
+    {
+      "name": "Aluguel",
+      "amount": 1000,
+      "id": "f8dffd3a-35f1-41ad-813d-c49307391448",
+      "done": false,
+      "createdAt": "2022-06-26T19:48:24.160Z"
+    },
+    {
+      "name": "Gasolina",
+      "amount": 500,
+      "id": "c9b7325e-cdc8-4f44-9741-10bcb6fc4b42",
+      "done": false,
+      "createdAt": "2022-06-26T19:48:32.362Z"
+    },
+    {
+      "name": "Condominio",
+      "amount": 600,
+      "id": "362c1e44-5194-49b8-95ba-73ed816c2fd0",
+      "done": false,
+      "createdAt": "2022-06-26T19:55:23.698Z"
+    },
+    {
+      "name": "asdfasd",
+      "amount": "1",
+      "id": "c4985da7-5daf-4cf7-a463-639a886f8873",
+      "done": false,
+      "createdAt": "2022-07-13T03:30:57.257Z"
+    },
+    {
+      "name": "teste",
+      "amount": "123",
+      "id": "6dd481cc-70f7-45ed-a091-154b2da962f5",
+      "done": false,
+      "createdAt": "2022-07-13T03:35:15.960Z"
+    },
+    {
+      "name": "asdfas",
+      "amount": "123",
+      "id": "c4da5a03-ae80-4180-8634-e27ae4773086",
+      "done": true,
+      "createdAt": "2022-07-13T03:36:30.640Z"
+    },
+    {
+      "name": "asdfasdf",
+      "amount": "123123",
+      "id": "145d11bd-6277-497b-b2e1-230826160661",
+      "done": false,
+      "createdAt": "2022-07-13T03:37:25.384Z"
+    },
+    {
+      "name": "asdfa",
+      "amount": "123123",
+      "id": "66fee73f-e449-4dec-870e-933b65867c3a",
+      "done": true,
+      "createdAt": "2022-07-13T03:38:26.995Z"
+    },
+    {
+      "name": "asdfasd",
+      "amount": "123123",
+      "id": "e73221c2-58ef-46fd-a38f-00d80990ec98",
+      "done": true,
+      "createdAt": "2022-07-13T03:40:33.009Z"
+    },
+    {
+      "name": "asdfasd",
+      "amount": "123123",
+      "id": "69a9c6c5-1280-448b-876c-3a9686905bd0",
+      "done": true,
+      "createdAt": "2022-07-13T03:46:44.846Z"
+    },
+    {
+      "name": "asdfasd",
+      "amount": "23141",
+      "id": "3db4d70b-9d01-494f-ab20-8a937d862859",
+      "done": true,
+      "createdAt": "2022-07-13T03:47:35.003Z"
+    },
+    {
+      "name": "adsfasdf",
+      "amount": "123123",
+      "id": "44973c2a-eafc-4138-a9ec-09a1c962b300",
+      "done": true,
+      "createdAt": "2022-07-13T03:51:17.937Z"
+    }
+  ]
+}
