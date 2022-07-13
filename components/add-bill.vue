@@ -23,12 +23,12 @@
           </v-form>
         </v-card-text>
         <v-card-actions class="justify-space-between">
-          <v-btn outlined @click='close'> Cancelar</v-btn>
+          <v-btn outlined @click="close"> Cancelar</v-btn>
           <v-btn
-            :loading='loading'
-            color='primary'
-            :disabled='!valid'
-            @click='save'
+            :loading="loading"
+            color="primary"
+            :disabled="!valid"
+            @click="save"
           >
             Salvar
           </v-btn>
