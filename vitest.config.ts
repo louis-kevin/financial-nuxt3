@@ -5,7 +5,13 @@ import path from "path";
 
 export default defineConfig({
   plugins: [
-    Vue(),
+    Vue({
+      template: {
+        compilerOptions: {
+          isCustomElement: (tag) => tag.includes('v-')
+        }
+      }
+    }),
     AutoImport({
       dirs: [
         './.nuxt'
