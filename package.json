@@ -9,6 +9,7 @@
     "test": "vitest"
   },
   "devDependencies": {
+    "@faker-js/faker": "^7.3.0",
     "@nuxt/test-utils-edge": "^3.0.0-rc.4-27627432.1ced224",
     "@pinia/testing": "^0.0.12",
     "@vitejs/plugin-vue": "^2.3.3",
