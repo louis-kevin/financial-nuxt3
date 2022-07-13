@@ -24,4 +24,6 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
           cache: "yarn"
-      - run: npm run test
+      - run: yarn --frozen-lockfile
+      - run: yarn generate
+      - run: yarn test
