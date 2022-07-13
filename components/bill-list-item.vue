@@ -15,8 +15,6 @@
       </v-col>
     </v-row>
   </v-list-item>
-
-
 </template>
 
 <script lang="ts" setup>
@@ -28,9 +26,9 @@ interface Props {
 }
 
 const props = defineProps<Props>()
-const billStore = useBillStore();
 
 const toggle = () => {
+  const billStore = useBillStore();
   billStore.toggleBill(props.bill)
 }
 

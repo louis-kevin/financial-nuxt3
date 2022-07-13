@@ -43,8 +43,6 @@ import { useBillStore } from "~/stores/billsStore";
 
 type Validation = (v: String) => boolean | String;
 
-const billStore = useBillStore();
-
 const bill: Ref<Bill> = ref({
   name: null,
   amount: null,
@@ -76,6 +74,7 @@ const save = async () => {
   if (!form.value?.validate() || loading.value) return;
   loading.value = true;
   try{
+    const billStore = useBillStore();
     await billStore.addBill({ ...bill.value });
     close();
   } catch(e) {
